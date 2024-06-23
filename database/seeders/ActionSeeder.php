@@ -15,9 +15,16 @@ class ActionSeeder extends Seeder
      */
     public function run()
     {
+
         DB::table('master_action')->insert([
             'name' => 'some action',
             'email_templates_id' => '1',
+            'created_at' => now()
+        ]);
+
+        DB::table('master_action')->insert([
+            'name' => 'other action',
+            'email_templates_id' => '3',
             'created_at' => now()
         ]);
     }

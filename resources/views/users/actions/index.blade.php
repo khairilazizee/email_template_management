@@ -14,14 +14,17 @@
                                 <div class="flex">
 
                                 </div>
-                                <h2>Action name</h2>
+                                <h2>{{ $action->name }}</h2>
                                 <input type="checkbox" name="" id=""> active
                                 <div class="form-group mb-4">
                                     <label for="content">{{ __('Content') }}</label>
-                                    <textarea class="ckeditor form-control" id="content" name="content" required></textarea>
+                                    <textarea class="ckeditor form-control" id="content" name="content" required>{{ $action->emailTemplates->modified_content }}</textarea>
                                 </div>
                                 <button>submit</button>
                             </form>
+                            <br>
+                            <hr>
+                            <br>
                         @endforeach
                     </div>
                 </div>

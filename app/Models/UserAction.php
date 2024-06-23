@@ -18,7 +18,7 @@ class UserAction extends Model
 
     public function emailTemplates()
     {
-        return $this->belongsTo(EmailTemplate::class, 'email_templates_id');
+        return $this->belongsTo(UserTemplate::class, 'user_templates_id');
     }
 
     public function masterAction()
