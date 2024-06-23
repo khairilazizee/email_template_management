@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\EmailTemplateController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\User\UserActionController;
 use App\Http\Controllers\User\UserTemplateController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,3 +34,5 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::resource('/dashboard/admin/templates', EmailTemplateController::class)->names('admin.templates');
 Route::resource('/dashboard/users/templates', UserTemplateController::class)->names('users.templates');
+
+Route::get('/dashboard/users/actions', [UserActionController::class, 'index'])->name('users.actions.index');

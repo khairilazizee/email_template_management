@@ -57,8 +57,10 @@
     <div class="sidebar">
         @if (session('user_role') === 3)
             <a href="/dashboard/admin/templates">Email Template</a>
+            {{-- <a href="/dashboard/admin/actions">Action Settings</a> --}}
         @else
-            <a href="#">Email List</a>
+            <a href="/dashboard/users/templates">Email List</a>
+            <a href="/dashboard/users/actions">Some action page</a>
         @endif
     </div>
 
