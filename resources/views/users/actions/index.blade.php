@@ -19,9 +19,9 @@
                                     <label for="content">{{ __('Content') }}</label>
                                     <textarea class="ckeditor form-control" id="content" name="content" required>{{ $action->emailTemplates->modified_content }}</textarea>
                                 </div>
-                                <input type="text" name="user_action_id" value={{ $action->id }}>
-                                <input type="text" name="user_template_id" value={{ $action->emailTemplates->id }}>
-                                <button>submit</button>
+                                <input type="hidden" name="user_action_id" value={{ $action->id }}>
+                                <input type="hidden" name="user_template_id" value={{ $action->emailTemplates->id }}>
+                                <button class="btn btn-primary">submit</button>
                             </form>
                             <br>
                             <hr>
