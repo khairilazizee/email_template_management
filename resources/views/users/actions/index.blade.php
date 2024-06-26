@@ -11,15 +11,16 @@
                     <div class="card-body">
                         @foreach ($userActions as $action)
                             <form action="" method="POST">
-                                <div class="flex">
-
-                                </div>
+                                @csrf
+                                @method('PUT')
                                 <h2>{{ $action->name }}</h2>
-                                <input type="checkbox" name="" id=""> active
+                                <input type="checkbox" name="status" value="1" id=""> active
                                 <div class="form-group mb-4">
                                     <label for="content">{{ __('Content') }}</label>
                                     <textarea class="ckeditor form-control" id="content" name="content" required>{{ $action->emailTemplates->modified_content }}</textarea>
                                 </div>
+                                <input type="text" name="user_action_id" value={{ $action->id }}>
+                                <input type="text" name="user_template_id" value={{ $action->emailTemplates->id }}>
                                 <button>submit</button>
                             </form>
                             <br>
