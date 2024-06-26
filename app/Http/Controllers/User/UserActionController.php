@@ -34,5 +34,7 @@ class UserActionController extends Controller
         $userAction->update([
             'status' => $request->has('status')
         ]);
+
+        return redirect()->route('users.actions.index');
     }
 }
